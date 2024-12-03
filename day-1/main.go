@@ -7,14 +7,20 @@ import (
 	"os"
 	"slices"
 	"sort"
+	"time"
 )
 
 func main() {
+	start := time.Now()
+
 	s1, s2 := getInput()
 	totalDistance := calculateDistances(s1, s2)
 	log.Printf("Total distance: %d", totalDistance)
 	similarityScore := calculateSimilarityScore(s1, s2)
 	log.Printf("Similarity Score: %d", similarityScore)
+
+	duration := time.Since(start)
+	log.Printf("Execution time: %s", duration)
 }
 
 func getInput() ([]int, []int) {
