@@ -9,12 +9,6 @@ import (
 	"time"
 )
 
-type Position struct {
-	x       int
-	y       int
-	visited bool
-}
-
 func main() {
 	start := time.Now()
 
