@@ -57,8 +57,13 @@ func startTrails(matrix []string) {
 		s = slices.CompactFunc(s, slices.Equal)
 		trailHeadCounter += len(s)
 	}
-
 	log.Printf("Trail head counter: %d", trailHeadCounter)
+
+	trailRatingCounter := 0
+	for _, s := range trailHeads {
+		trailRatingCounter += len(s)
+	}
+	log.Printf("Trail rating counter: %d", trailRatingCounter)
 }
 
 func findTrails(matrix []string, startPos []int, startNum int, globalCounter *int32, trailHeads map[int][][]int, counter int) {
