@@ -114,22 +114,6 @@ func intLength(v int) int {
 	return length
 }
 
-func firstHalf(v int, length int) int {
-	halfLength := length / 2
-	divisor := intPow(10, halfLength)
-	firstHalf := v / divisor
-
-	return firstHalf
-}
-
-func lastHalf(v int, length int) int {
-	halfLength := length / 2
-	divisor := intPow(10, halfLength)
-	lastHalf := v % divisor
-
-	return lastHalf
-}
-
 func intPow(base int, exp int) int {
 	result := 1
 	for exp > 0 {
